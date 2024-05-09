@@ -1,22 +1,23 @@
 import React from 'react'
 import Card from './Card'
 
-const h = 120
+const multiple = .5
+const h = 120 * multiple
 
 export default function Page({ comments, name }) {
 
   return (
     <div style={{
-      height: 1754,
-      width: 1240,
+      height: 1754 * multiple,
+      width: 1240 * multiple,
       backgroundColor: '#eee',
       margin: 'auto',
       position: 'relative',
-      padding: 40,
+      padding: 40 * multiple,
     }}>
       <div className="timeline-track" style={{
         position: 'absolute',
-        width: 5,
+        width: 5 * multiple,
         height: '100%',
         backgroundColor: '#ccc',
         left: '50%',
@@ -26,10 +27,11 @@ export default function Page({ comments, name }) {
       }}>
       </div>
       <div className="name d-flex justify-content-center" style={{ position: 'relative', zIndex: 2 }}>
-        <div className='p-3 px-4 fw-bold mb-4 fs-4 bg-primary' style={{
-
+        <div className=' fw-bold mb-4 bg-primary' style={{
+          padding: 20 * multiple,
+          fontSize: 24 * multiple,
           color: 'white',
-          borderRadius: 20,
+          borderRadius: 20 * multiple,
         }} >{name}</div>
       </div>
 
